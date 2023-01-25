@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import QuizSettings from '../components/QuizSettings';
+
 
 const HomeStyled = styled.main`
     display:flex;
@@ -22,30 +24,11 @@ const HomeStyled = styled.main`
     }
 `;
 
-const SettingsStyled = styled.section`
-        width:45%;
-        padding:10px;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        font-family: "Poppins", sans-serif;
-        font-weight:300;
-    span{
-        font-size:30px;
-    }
-
-    
-    @media (max-width:800px){
-        width:100%
-    }
-`;
-
-const HomePage = () => {
+const HomePage = ({ name, setName, fetchQuestions }) => {
     return (
         <HomeStyled>
-            <SettingsStyled>
-                <span>Quiz Settings</span>
-            </SettingsStyled>
+            <QuizSettings name={name} setName={setName} fetchQuestions={fetchQuestions } />
+
             <img src="/quiz.svg" alt="quiz arik alexandrov"/>
         </HomeStyled>
     )
