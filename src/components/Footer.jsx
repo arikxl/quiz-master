@@ -17,7 +17,7 @@ const Footer = () => {
             made with ❤️ by&nbsp;
             <a href='https://www.linkedin.com/in/arik-alexandrov/'
                 target="_blank" rel="noreferrer"
-            > arikxl
+            > arikxl 
             </a>
         </FooterStyled>
     )
