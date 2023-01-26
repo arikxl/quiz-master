@@ -9,12 +9,15 @@ const FooterStyled = styled.footer`
     background-color: #155283;
     padding: 10px 0;
     
+    a{
+        text-decoration: underline;
+    }
 `;
 
 const Footer = () => {
     return (
         <FooterStyled>
-            made with ❤️ by&nbsp;
+            Created by&nbsp;
             <a href='https://www.linkedin.com/in/arik-alexandrov/'
                 target="_blank" rel="noreferrer"
             > arikxl 

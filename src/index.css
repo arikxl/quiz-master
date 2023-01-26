@@ -21,6 +21,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
     background-color: #155283;
     color: #61dafb;
+    padding: 4px;
 }
 
 a{

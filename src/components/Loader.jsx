@@ -5,8 +5,9 @@ import React from 'react'
     // size: 150
 
 const Loader = () => {
+    console.log('ssss')
   return (
-    <div>Loader</div>
+    <div>Loader!!!!</div>
   )
 }
 
