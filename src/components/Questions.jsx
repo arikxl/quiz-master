@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Error from './Error';
 
 import { decode } from 'html-entities';
+import Loader from './Loader';
 
 decode('&lt; &gt; &quot; &apos; &amp; &#169; &#8710; &#039;');
 
@@ -112,6 +113,7 @@ const Questions = ({ score, setScore, options, currQues,
 
     return (
         <QuestionStyled>
+            {!questions && <Loader />}
             <h1>Question {currQues + 1}</h1>
             <SingleQuestStyled>
                 <h2>{decode(questions[currQues]?.question)}</h2>
