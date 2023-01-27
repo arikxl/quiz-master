@@ -34,7 +34,7 @@ const App = () => {
             name={name} setName={setName} />} />
           <Route path="/quiz" element={<Quiz name={name} questions={questions}
             score={score} setScore={setScore} setQuestions={setQuestions } />} />
-          <Route path="/result" element={< Results score={ score} />} />
+          <Route path="/result" element={< Results score={score} name={name } />} />
           <Route path="*" element={  < NotFound/>} />
 
         </Routes>

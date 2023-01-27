@@ -18,7 +18,7 @@ const QuizStyled = styled.section`
   }
 
   .quiz-info{
-    width:100%;
+    width:90%;
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
@@ -66,7 +66,7 @@ const Quiz = ({ score, setScore, questions, setQuestions, name }) => {
             </div >
             <Questions options={options} currQues={currQues} questions={questions}
               setCurrQues={setCurrQues} score={score} setScore={setScore}
-              correct={questions[currQues]?.correct_answer} setQuestions={setQuestions}
+              correct={questions[currQues]?.correct_answer}
             />
           </>
         )}

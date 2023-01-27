@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import Error from './Error';
 
+import { decode } from 'html-entities';
+
+decode('&lt; &gt; &quot; &apos; &amp; &#169; &#8710; &#039;');
 
 const QuestionStyled = styled.section`
     width:100%;
@@ -65,14 +68,12 @@ const OptionsStyled = styled.div`
 `;
 
 const Questions = ({ score, setScore, options, currQues,
-    questions, setQuestions, setCurrQues, correct }) => {
+    questions, setCurrQues, correct }) => {
 
     const navigate = useNavigate()
 
     const [selected, setSelected] = useState('');
     const [error, setError] = useState('');
-
-    console.log('questions[currQues]?.question:', questions[currQues]?.question)
 
     const handleSelect = (option) => {
         if (selected === option && selected === correct) {
@@ -92,7 +93,9 @@ const Questions = ({ score, setScore, options, currQues,
     }
 
     const handleQuit = () => {
-
+        if (window.confirm('Are you sure you want to quit?')) {
+            navigate('/result')
+        }
     }
 
     const handleNext = () => {
@@ -111,29 +114,29 @@ const Questions = ({ score, setScore, options, currQues,
         <QuestionStyled>
             <h1>Question {currQues + 1}</h1>
             <SingleQuestStyled>
-                <h2>{questions[currQues]?.question}</h2>
-                <OptionsStyled>
+                <h2>{decode(questions[currQues]?.question)}</h2>
+                <OptionsStyled >
                     {error && <Error>{error}</Error>}
                     {options && options.map((opt, index) => (
-                        <button onClick={() => handleCheck(opt)}
+                        <button  onClick={() => handleCheck(opt)}
                             key={index} disabled={selected}
                             className={`singleOption ${selected && handleSelect(opt)}`}
                         >
-                            {opt}
+                            {decode(opt)}
                         </button>
                     ))}
                 </OptionsStyled>
                 <div className="btns-panel">
                     <Button variant='contained' color='secondary'
-                        size='large' style={{ width: 185 }}
-                        href='/' onClick={handleQuit}
+                        size='large' style={{ width: '46%' }}
+                        onClick={handleQuit}
                     >Quit</Button>
                     <Button variant='contained' color='primary'
-                        size='large' style={{ width: 185 }}
+                        size='large' style={{ width: '46%' }}
                         onClick={handleNext}
 
                     >
-                        {currQues === 9 ? 'Finish' : 'Next Question'}
+                        {currQues === 9 ? 'Finish' : 'Next'}
                     </Button>
                 </div>
             </SingleQuestStyled>
