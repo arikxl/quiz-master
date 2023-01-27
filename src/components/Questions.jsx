@@ -1,10 +1,10 @@
-import { Button } from '@mui/material';
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import Error from './Error';
-
+import { Button } from '@mui/material';
 import { decode } from 'html-entities';
+import { useNavigate } from 'react-router-dom';
+
+import Error from './Error';
 import Loader from './Loader';
 
 decode('&lt; &gt; &quot; &apos; &amp; &#169; &#8710; &#039;');

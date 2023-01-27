@@ -1,10 +1,10 @@
-import { Button, MenuItem, TextField } from '@mui/material';
 import React, { useState } from 'react';
-import {  useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import Categories from '../data/categories';
-import Error from './Error';
+import {  useNavigate } from 'react-router-dom';
+import { Button, MenuItem, TextField } from '@mui/material';
 
+import Error from './Error';
+import Categories from '../data/categories';
 
 const SettingsStyled = styled.form`
         width:45%;

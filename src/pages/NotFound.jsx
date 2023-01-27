@@ -2,7 +2,7 @@ import React from 'react'
 
 const NotFound = () => {
   return (
-    <div>404</div>
+    <div>OGRY THE GEVER</div>
   )
 }
 

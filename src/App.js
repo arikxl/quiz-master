@@ -1,14 +1,14 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Footer from './components/Footer';
-import Header from './components/Header';
+
 import './index.css';
+import Quiz from './pages/Quiz';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Results from './pages/Results';
 import HomePage from './pages/HomePage';
 import NotFound from './pages/NotFound';
-import Quiz from './pages/Quiz';
-import Results from './pages/Results';
-
 
 const App = () => {
   

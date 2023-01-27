@@ -1,7 +1,7 @@
-import { Button } from '@mui/material';
 import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import { Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const ResultStyled = styled.section`
   display: flex;
